@@ -1,0 +1,5 @@
+docker run -it --rm \
+    --mount type=volume,src=synapse-data,dst=/data \
+    -e SYNAPSE_SERVER_NAME=matrix.totti-web.de \
+    -e SYNAPSE_REPORT_STATS=no \
+    matrixdotorg/synapse:latest generate
