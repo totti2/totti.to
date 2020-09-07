@@ -5,10 +5,10 @@ This is a storage of my setup and config files for my personal docker-based serv
 
 Structure
 VPS at netcup:
-- mail.totti.to
+- mail.
 
 udoo ultra at home
-- cloud.@
+- cloud.
 
 more to come
 
