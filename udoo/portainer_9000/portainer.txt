@@ -1,0 +1,21 @@
+# https://github.com/portainer/portainer/issues/1542
+# https://github.com/MatchbookLab/local-persist
+# https://stackoverflow.com/questions/50733139/portainer-create-new-volume
+# https://www.composerize.com/
+
+version: "3.3"
+
+volumes:
+    portainer_data:
+    
+services:
+    portainer:
+        ports:
+#            - '8000:8000'
+            - 9000:9000
+        container_name: portainer
+        restart: always
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - portainer_data:/data
+        image: portainer/portainer
