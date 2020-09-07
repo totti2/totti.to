@@ -4,12 +4,15 @@ Personal docker-based homeserver
 This is a storage of my setup- and config-files of my personal docker-based server setup.
 
 Structure
+
 VPS at netcup:
-- mail.
+- mailu
 
 udoo ultra at home
-- cloud.
+- nextcloud
 
-more to come
+Raspberry 3B at home
+- pihole
+- Wireguard
 
 
