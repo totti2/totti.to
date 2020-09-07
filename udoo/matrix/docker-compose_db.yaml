@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+
+  synapse:
+    image: docker.io/matrixdotorg/synapse:latest
+    # Since synapse does not retry to connect to the database, restart upon
+    # failure
+    restart: always
+    # See the readme for a full documentation of the environment settings
+    environment:
+        - SYNAPSE_CONFIG_PATH=/etc/homeserver.yaml
+        #- SYNAPSE_SERVER_NAME=matrix.totti-web.de
+        - SYNAPSE_REPORT_STATS=no
+        # entweder homeserver.yaml angeben oder SYNAPSE_SERVER_NAME=... aber nicht beides
+    volumes:
+      # You may either store all the files in a local folder
+      - matrix_conf:/etc
+      - matrix_data:/data
+      # .. or you may split this between different storage points
+      # - ./files:/data
+      # - /path/to/ssd:/data/uploads
+      # - /path/to/large_hdd:/data/media
+    ports:
+      - 8008:8008
+    depends_on:
+      - db
+
+  db:
+    image: docker.io/postgres:10-alpine
+    # Change that password, of course!
+    environment:
+      - POSTGRES_USER=synapse
+      - POSTGRES_PASSWORD=5fzSgZISA86IgHNQ64K4
+    volumes:
+      # You may store the database tables in a local folder..
+      - ./schemas:/var/lib/postgresql/data
+      # .. or store them on some high performance storage for better results
+      # - /path/to/ssd/storage:/var/lib/postgresql/data
+
+
+
+# warum auch immer...
+# touch /data_4TB/matrix/data/matrix.totti-web.de.log.config
