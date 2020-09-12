@@ -13,9 +13,14 @@ Raspberry 3B at home
 - pihole
 - Wireguard
 
-I made a lot of mistakes while administrating my cloud-services before. "Admin-Error", so "mis-debugging" or "mis-updating" when in daily use, left the system unusable. Also, I had only a few security measurements set up. fail2ban, full disk encryption, ufw and spamhaus.
+I made a lot of mistakes while administrating my cloud-services before. "Admin-Error", so "mis-debugging" or "mis-updating" when in daily use, left the system unusable. Also, I had only a few security measurements set up. fail2ban, full disk encryption, ufw and spamhaus. Back-up were not performed on a regular basis.
 
 I there want to
-1. Satbilize the system
+
+1. Stabilize the system
 2. Create a stable admin, update and debug rhythm
+3. Initialize System Monitoring (Hardware, logfiles
+4. harden security
+5. create back-ups on a regular basis
+
 To prioritize my activities I started with a FMEA using [this](https://medium.com/@adrianco/failure-modes-and-continuous-resilience-6553078caad5) spreadsheet as a template. I bet I made some mistakes and of course the evaluation considers my perosnal setup only. So there is much room for interpretation.
