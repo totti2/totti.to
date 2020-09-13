@@ -1,6 +1,5 @@
-https://www.linode.com/docs/security/firewalls/configure-firewall-with-ufw/
-
 # UFW - Uncomplicated firewall
+[It is pretty straight forward](https://wiki.ubuntuusers.de/ufw/)
 
 Allow all outgoing traffic.
 Block all incoming traffic.
