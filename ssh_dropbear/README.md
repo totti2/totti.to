@@ -26,4 +26,4 @@ cryptroot-unlock
 
 ## [Reduce the number of exposed ports to a minium with SSH-Tunnel and AutoSSH](https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/)
 
-autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 9001:localhost:9001 vicke@mail.totti.to
+autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 1234:localhost:1234 vicke@mail.totti.to
