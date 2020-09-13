@@ -1,5 +1,5 @@
-# Full-Disk Encryption & SSH-Tunnel during boot
-## [Dropbear does the trick](https://hamy.io/post/0009/how-to-install-luks-encrypted-ubuntu-18.04.x-server-and-enable-remote-unlocking/#gsc.tab=0)
+# Full-Disk Encryption & SSH-Tunnel during boot & AutoSSH
+## [SSH & Full-Disk-Encryption: Dropbear does the trick](https://hamy.io/post/0009/how-to-install-luks-encrypted-ubuntu-18.04.x-server-and-enable-remote-unlocking/#gsc.tab=0)
 
 ```bash
 apt update && apt-get upgrade -y
@@ -23,3 +23,7 @@ nano /etc/ssh/sshd_config
 
 cryptroot-unlock
 ```
+
+## [Reduce the number of exposed ports to a minium with SSH-Tunnel and AutoSSH](https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/)
+
+autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 9001:localhost:9001 vicke@mail.totti.to
