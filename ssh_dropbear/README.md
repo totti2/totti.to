@@ -25,5 +25,24 @@ cryptroot-unlock
 ```
 
 ## [Reduce the number of exposed ports to a minium with SSH-Tunnel and AutoSSH](https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-autossh/)
+```
+# retrieve relevant IP-address on local server
+ip addr
+# look out for docker0 ... 172.xx.0.1
 
-autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 1234:localhost:1234 vicke@mail.totti.to
+
+autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -L 172.xx.0.1:1234:localhost:1234 vicke@mail.totti.to
+
+#only if ~/.ssh/config is configured
+# autossh -M 0 -f -T -N mail.totti.to
+
+
+Host mail.totti.to
+    HostName      mail.totti.to
+    User          vicke
+    Port          22
+    IdentityFile  ~/.ssh/id_ecdsa_vicke_mail_totti_to
+    LocalForward  1234 localhost:1234
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+```
