@@ -1,0 +1,34 @@
+# https://github.com/portainer/portainer/issues/1542
+# https://github.com/MatchbookLab/local-persist
+# https://stackoverflow.com/questions/50733139/portainer-create-new-volume
+# https://www.composerize.com/
+# https://github.com/cagataygurturk/docker-ssh-tunnel
+
+version: "3.3"
+
+volumes:
+    portainer_data:
+    
+services:
+    portainer:
+        ports:
+#            - '8000:8000'
+            - XXXX:9000         # local-port:container-port of the portainer-manager
+        container_name: portainer
+        restart: always
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - portainer_data:/data
+        image: portainer/portainer
+        
+    ssh_portainer_agent:
+        image: ssh_docker:latest
+        container_name: ssh_portainer_agent
+        volumes:
+          - /home/icke/.ssh/id_rsa:/root/ssh/id_rsa:ro
+        environment:
+          USER_HOST: user
+          TUNNEL_HOST: VPS-domain.tld
+          REMOTE_HOST: 172.18.XXX.XXX # IP of the remote portainer-agent-container
+          LOCAL_PORT: XXXX # port to be inserted in portainer-manager
+          REMOTE_PORT: XXXX # port used by the remote portainer-agent
