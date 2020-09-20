@@ -4,14 +4,14 @@ port 8000 is ignored because I do not use the [edge agent](https://downloads.por
 
 ## [Reduce the number of exposed ports to a minium with SSH-Tunnel and AutoSSH](https://www.everythingcli.org/ssh-tunnelling-for-fun-and-profit-tunnel-options/)
 
-On my VPS I have mail-server-containers that I want to manage from my main hardware. I therefore install a portainer-*agent* on the VPS.
+On my VPS, I have a container-based setup that I want to manage from my main hardware. I therefore install a portainer-*agent* on the VPS, managed by the portainer-manager on my *udoo ultra*.
 
 Now, instead of opening yet another port for the portainer-agent, I will tunnel all my traffic through port 22 using autossh.
 Thus, I create a container that establishes the tunnel.
 
 To Do
-- [x]  Create container for ss-tunneling
+- [x]  Create container for ssh-tunneling
 - [x]  Create New *endpoint* in portainer-gui
-- [ ]  VPS - Close all other open ports
+- [x]  VPS - Close all other open ports with ufw
 - [ ]  VPS - restrict the portainer-agent-network to local-acces only
-- [ ]  
+- [ ]  double-check ufw vs. docker
