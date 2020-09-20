@@ -1,2 +1,3 @@
 
 udoo/portainer/i-docker-compose.yml
+VPS/portainer_agent/i-docker-compose.yml
