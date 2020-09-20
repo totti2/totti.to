@@ -7,7 +7,7 @@ RUN apk add --update openssh-client && rm -rf /var/cache/apk/*
 #ssh \#CMD chmod -R 600 /root/.ssh/* && ssh \
 
 CMD mkdir /root/.ssh && cp -R /root/ssh/* /root/.ssh/ && chmod 600 /root/.ssh/* && \
-autossh \
+ssh \
 -vv \
 -o StrictHostKeyChecking=no \
 # still missing
