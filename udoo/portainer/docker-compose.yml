@@ -4,7 +4,7 @@
 # https://www.composerize.com/
 # https://github.com/cagataygurturk/docker-ssh-tunnel
 
-version: "3.3"
+version: "2"
 
 volumes:
     portainer_data:
@@ -21,11 +21,11 @@ services:
             - portainer_data:/data
         image: portainer/portainer
         
-    ssh_portainer_agent:
-        image: ssh_docker:latest
+    autossh_portainer_agent:
+        image: autossh_docker:latest
         container_name: ssh_portainer_agent
         volumes:
-          - /home/icke/.ssh/id_rsa:/root/ssh/id_rsa:ro
+          - /home/user/.ssh/id_rsa:/root/ssh/id_rsa:ro
         environment:
           USER_HOST: user
           TUNNEL_HOST: VPS-domain.tld
