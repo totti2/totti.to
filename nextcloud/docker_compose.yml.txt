@@ -1,0 +1,64 @@
+version: '2'
+
+# Stack nur mit kleinbuchstabe benennen
+# https://github.com/portainer/portainer/issues/2020
+
+volumes:
+  nc:
+  nc_data:
+  nc_db:
+  nc_conf:
+  nc_apps:
+#  nc_web:  
+
+services:
+  db:
+    image: mariadb
+    restart: always
+    volumes:
+      - nc_db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=nextcloud
+      - MYSQL_PASSWORD=nextcloud
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+
+  app:
+    image: nextcloud:fpm
+#    ports:
+#      - 38080:80
+    links:
+      - db
+    volumes:
+      - nc:/var/www/html/
+      - nc_data:/var/www/html/data
+      - nc_conf:/var/www/html/config
+      - nc_apps:/var/www/html/apps
+    restart: always
+
+  web:
+    image: nginx
+    ports:
+      - 38080:80
+    links:
+      - app
+    volumes:
+      # https://github.com/nextcloud/docker/blob/master/.examples/docker-compose/with-nginx-proxy/mariadb/fpm/web/nginx.conf
+      - /home/icke/test/nginx.conf:/etc/nginx/nginx.conf:ro
+    volumes_from:
+      - app
+    restart: always
+
+####################
+#   Backup Restore nach 
+#   https://www.c-rieger.de/nextcloud-backup-and-restore/
+#   https://hub.docker.com/_/nextcloud/
+#   https://gist.github.com/nshtg/24c22f8878456e00c1f07f762038f58c
+#####################
+#   Restore MySQL-Database
+#   Benutze das neue MySQL-Passwort!
+#####################
+#   cat /data_4TB/bkp/nc/ncdb_191124.sql | docker exec -i nextcloud_db_1 /usr/bin/mysql -u nextcloud -ppassword nextcloud
+
+
+
