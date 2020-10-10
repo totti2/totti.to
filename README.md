@@ -1,5 +1,4 @@
 # totti.to
----
 ## Personal docker-based homeserver
 
 this is to document the setup of my own nextcloud-, jitsi-, matrix-, wireguard- and mail-server-instances. This is more a storage of my setup- and config-files than an actual code repo.
