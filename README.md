@@ -1,27 +1,27 @@
 # totti.to
+---
+## Personal docker-based homeserver
 
-Personal docker-based homeserver
+this is to document the setup of my own nextcloud-, jitsi-, matrix-, wireguard- and mail-server-instances. This is more a storage of my setup- and config-files than an actual code repo.
 
-Basically, I want to have my own cloud, nextcloud. But installing nextcloud and exposing it to the internet ist not enough. I made a lot of mistakes while administrating my cloud-services before. "Admin-Error", so "mis-debugging" or "mis-updating" when in daily use, left the system unusable. Also, I had only a few security measurements set up. fail2ban, full disk encryption, ufw and spamhaus. Back-ups were not performed on a regular basis.
+Exposing services to the internet is not all one should when considering self-hosting. Stable, secure systems require some more attention and preparation. I started with an FMEA using [this](https://medium.com/@adrianco/failure-modes-and-continuous-resilience-6553078caad5) template. The result is a sorted road map.
 
-I therefore want to
+## Road Map
+- [ ] Hardware Monitoring
+- [ ] UPS
+- [ ] Logserver with analytics and alerts
+- [ ] Tor-Pi
+- [ ] Intrusion Detection System
 
-1. Stabilize the system
-2. Create a stable admin, update and debug rhythm
-3. Initialize System Monitoring (Hardware, logfiles)
-4. Harden security
-5. Create back-ups on a regular basis
+## Target services
+* nextcloud
+* jitsi-meet server
+* matrix-server
+* wireguard
+* Mail-server
+* DNS-filter for ad-free browsing
 
-This is more like a storage of my setup- and config-files than an actual code repo. Yet, this will contain useful stuff needed for setting up something similar.
-
-To prioritize my activities I started with an FMEA using [this](https://medium.com/@adrianco/failure-modes-and-continuous-resilience-6553078caad5) spreadsheet as a template. I bet I made some mistakes and of course the evaluation considers my personal setup only. So there is much room for interpretation.
-
-## Current setup
-
+## Server-Setup
 * VPS at netcup
-  * mailu
 * udoo ultra at home
-  * nextcloud
-* Raspberry 3B at home
-  * pihole
-  * Wireguard
+* Raspberry 3B at home 
