@@ -5,6 +5,7 @@ My apartment is only fused up to *x* amperes. Two additional radiators + oven + 
 
 Requirements:
 - [x] power supply in case of blackout for 5...10 minutes
+
 --> udoo + Raspberry Pi + telephone + 2 routers + modem = < 200W
 --> 200W = 12V * I <==> I = 200W/12V = 16,67A
 --> Q = 7,2Ah = 16,67A * t <==> t = (7,2Ah / 16,67A)* 60min = 26min
