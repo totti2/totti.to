@@ -1,27 +1,22 @@
 # Uninterruptible Power Supply 
 (UPS)
 
-My apartment is only fused up to *x* amperes. Two additional radiators + oven + hairdryer = blackout. I purchased a Line-Interactive UPS *APC Back-UPS BX - BX700U-GR* for ~80€ with an integrated battery of 7.2Ah at 12V.
+My apartment is only fused up to *x* amperes: two additional radiators + oven + hairdryer = blackout. I purchased a Line-Interactive UPS *APC Back-UPS BX - BX700U-GR* for ~80€ with an integrated battery of 7.2Ah at 12V.
 
 Dimensioning:
-- udoo + Raspberry Pi + telephone + 2 routers + modem = < 200W
-- Maximum Current
-	- 200W = 12V * I 
-	- I = 200W/12V 
-	- = 16,67A
+- udoo + Raspberry Pi + telephone + 2 routers + modem = **<200W**
 - Maximum battery life
-	- Q = 7,2Ah = 16,67A * t 
-	- t = (7,2Ah / 16,67A)* 60min
+	- t = (7,2Ah * 12V / 200W)* 60min
 	- = **26min**
-
-7,2 Ah * 12 V = 1
-
+This will just do.
 
 Requirements:
-- [x] power supply in case of blackout for 5...10 minutes
-
-
+- [x] power supply in case of blackout
 - [ ] alert admin about it
+- [ ] create log entry
+- [ ] before end of battery: stop services and shutdown clients
+- [ ] turn on clients when power is back
+- [ ] alert e-mail when power is back
 
 
 
