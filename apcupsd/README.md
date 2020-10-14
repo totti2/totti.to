@@ -1,5 +1,4 @@
-# Uninterruptible Power Supply 
-(UPS)
+# Uninterruptible Power Supply (UPS)
 
 My apartment is only fused up to *x* amperes: two additional radiators + oven + hairdryer = blackout. I purchased a Line-Interactive UPS *APC Back-UPS BX - BX700U-GR* for ~80€ with an integrated battery of 7.2Ah at 12V.
 
@@ -7,7 +6,7 @@ My apartment is only fused up to *x* amperes: two additional radiators + oven + 
 - udoo + Raspberry Pi + telephone + 2 routers + modem = **<200W**
 - Maximum battery life
 	- t = (7,2Ah * 12V / 200W)* 60min
-	- = **26min**
+	- t = **26min**
 
 This will just do.
 
@@ -27,6 +26,7 @@ Or I just find a good existing solution in a tutorial. We'll see..
 ```
 sudo apt install apcupsd
 lsusb
+sudo cp /etc/apcupsd/apcupsd.conf /etc/apcupsd/apcupsd.conf.bak
 sudo nano /etc/apcupsd/apcupsd.conf
 
 	UPSNAME ups-apc
