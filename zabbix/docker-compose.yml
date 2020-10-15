@@ -1,0 +1,9 @@
+version: "2"
+services:
+  zabbix:
+    ports:
+      - 10080:80
+      - 10051:10051
+    image: zabbix/zabbix-appliance:latest
+    container_name: zabbix
+    restart: unless-stopped
