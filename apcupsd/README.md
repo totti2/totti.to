@@ -4,7 +4,7 @@ My apartment is only fused up to *x* amperes: two additional radiators + oven + 
 
 ## Dimensioning:
 - 2 Routers 78W + Raspberry 15W + udoo ultra 36W + Modem 24W + Telephone 2W = **<155W**
-- Maximum battery life
+- Estimated battery life
 	- t = (7,2Ah * 12V / 155W)* 60min
 	- t = **33min**
 
