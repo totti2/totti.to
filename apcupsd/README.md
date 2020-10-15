@@ -13,8 +13,8 @@ This will just do. Also, keep in mind that those values were taken from the powe
 ## Requirements:
 - [x] power supply in case of blackout
 - [ ] alert admin about it
-- [ ] create log event and save monitoring logs
-- [ ] before end of battery: stop services and shutdown clients
+- [x] create log event and save monitoring logs
+- [x] before end of battery: stop services and shutdown clients
 - [ ] turn on clients when power is back
 - [ ] alert e-mail when power is back
 
@@ -43,8 +43,13 @@ sudo service apcupsd start
 sudo service apcupsd status
 sudo reboot
 apcaccess status
-
 	...
 	TIMELEFT : 71.3 Minutes
 	...
+
+sudo apctest
+	...
+	2...self-test
+	...
+	
 ```
