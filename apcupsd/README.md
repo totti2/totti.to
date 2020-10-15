@@ -3,12 +3,12 @@
 My apartment is only fused up to *x* amperes: two additional radiators + oven + hairdryer = blackout. I purchased a Line-Interactive UPS *APC Back-UPS BX - BX700U-GR* for ~80€ with an integrated battery of 7.2Ah at 12V.
 
 ## Dimensioning:
-- udoo + Raspberry Pi + telephone + 2 routers + modem = **<200W**
+- 2 Routers 78W + Raspberry 15W + udoo ultra 36W + Modem 24W + Telephone 2W = **<155W**
 - Maximum battery life
-	- t = (7,2Ah * 12V / 200W)* 60min
-	- t = **26min**
+	- t = (7,2Ah * 12V / 155W)* 60min
+	- t = **33min**
 
-This will just do.
+This will just do. Also, keep in mind that those values were taken from the power supplies of the devices and represent their maximum consumption.
 
 ## Requirements:
 - [x] power supply in case of blackout
@@ -43,4 +43,8 @@ sudo service apcupsd start
 sudo service apcupsd status
 sudo reboot
 apcaccess status
+
+	...
+	TIMELEFT : 71.3 Minutes
+	...
 ```
