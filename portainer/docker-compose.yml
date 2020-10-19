@@ -19,7 +19,7 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - portainer_data:/data
-        image: portainer/portainer
+        image: portainer/portainer-ce
         
     autossh_portainer_agent:
         image: autossh_docker:latest
