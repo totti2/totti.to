@@ -24,4 +24,14 @@ Exposing services to the internet is not all you should do when considering self
 ## Server-Setup
 * VPS at netcup
 * udoo ultra at home
-* Raspberry 3B at home 
+* Raspberry 3B at home
+
+## Standard Procedures
+### Debugging / Repairing
+
+1. docker logs XXX
+2. docker inspect XXX
+2. Backup relevant data/volume (cp /var/lib/docker/volumes/... /back/up/location/)
+3. docker container stop XXX
+4. docker image rm XXX
+5. docker-compose up -d
