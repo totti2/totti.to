@@ -10,8 +10,8 @@ Now, instead of opening yet another port for the portainer-agent, I will tunnel 
 Thus, I create a container that establishes the tunnel.
 
 To Do
-- [x]  Create container for ssh-tunneling
+- [ ]  ~~Create container for ssh-tunneling~~ [I will wait for this feature to be implemented](https://github.com/portainer/portainer/issues/431)
 - [x]  Create New *endpoint* in portainer-gui
 - [x]  VPS - Close all other open ports with ufw
-- [ ]  VPS - restrict the portainer-agent-network to local-acces only
+- [ ]  ~~VPS - restrict the portainer-agent-network to local-acces only~~
 - [ ]  double-check ufw vs. docker
