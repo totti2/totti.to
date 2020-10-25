@@ -27,7 +27,7 @@ Exposing services to the internet is not all you should do when considering self
 * Raspberry 3B at home
 
 ## Standard Procedures
-### Debugging / Repairing
+### Restart Docker Stacks / Reload images
 
 1. docker logs XXX
 2. docker inspect XXX
