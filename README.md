@@ -7,7 +7,7 @@ Exposing services to the internet is not all you should do when considering self
 
 ## Road Map - administration
 - [ ] Hardware Monitoring
-- [ ] UPS
+- [x] UPS
 - [ ] Logserver with analytics and alerts
 - [ ] Tor-Pi
 - [ ] Intrusion Detection System
