@@ -28,10 +28,11 @@ Exposing services to the internet is not all you should do when considering self
 
 ## Standard Procedures
 ### Restart Docker Stacks / Reload images
-
-1. docker logs XXX
-2. docker inspect XXX
-2. Backup relevant data/volume (cp /var/lib/docker/volumes/... /back/up/location/)
-3. docker container stop XXX
-4. docker image rm XXX
-5. docker-compose up -d
+```
+docker logs XXX
+docker inspect XXX
+Backup relevant data/volume (cp /var/lib/docker/volumes/... /back/up/location/)
+docker container stop XXX
+docker image rm XXX
+docker-compose up -d
+```
