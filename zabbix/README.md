@@ -5,7 +5,6 @@
 
 - [ ] Setup e-mail notification on critical events
 - [ ] Monitor the UPS
-
 	1. Download templates [here](https://share.zabbix.com)
 	Import them via *Configuration* --> *Templates* --> *Import*
 	Search for the new template and click on the search result
