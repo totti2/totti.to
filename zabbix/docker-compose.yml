@@ -1,9 +1,20 @@
 version: "2"
+
 services:
-  zabbix:
-    ports:
-      - 10080:80
-      - 10051:10051
-    image: zabbix/zabbix-appliance:latest
-    container_name: zabbix
-    restart: unless-stopped
+
+    zabbix:
+        ports:
+            - 123480:80
+            - 123451:10051
+        image: zabbix/zabbix-appliance:latest
+        container_name: zabbix_main
+        restart: unless-stopped
+
+    zabbix_agent:
+        container_name: zabbix-agent
+        environment:
+            - ZBX_HOSTNAME=zabbix-agent
+            - ZBX_SERVER_HOST=172.19.0.2
+        image: zabbix/zabbix-agent
+        privileged: true
+        restart: unless-stopped
