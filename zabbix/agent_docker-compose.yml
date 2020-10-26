@@ -1,8 +1,0 @@
-version: '2'
-services:
-    run:
-        container_name: zabbix-agent
-        environment:
-            - ZBX_HOSTNAME=some-hostname
-            - ZBX_SERVER_HOST=some-zabbix-server
-        image: zabbix/zabbix-agent
