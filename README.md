@@ -32,7 +32,7 @@ Exposing services to the internet is not all you should do when considering self
 docker logs XXX
 docker inspect XXX
 Backup relevant data/volume (cp /var/lib/docker/volumes/... /back/up/location/)
-docker container stop XXX
-docker image rm XXX
+docker container stop XXX YYY ZZZ
+docker image rm XXX YYY ZZZ
 docker-compose up -d
 ```
