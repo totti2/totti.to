@@ -1,3 +1,6 @@
+# Use the appliance image for the fastest approach
+# Modify agent-IP as given here https://techexpert.tips/zabbix/zabbix-docker-installation-ubuntu-linux/
+
 version: "2"
 
 services:
