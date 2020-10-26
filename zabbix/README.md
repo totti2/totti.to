@@ -4,9 +4,10 @@
 - [ ] Setup e-mail notification on critical events
 - [ ] Monitor your host components using templates
 	1. Find templates [here](https://share.zabbix.com)
+		1. [APC-UPS template](https://share.zabbix.com/power-ups/apc/updated-apc-ups)
 	2. Import via *Configuration* --> *Templates* --> *Import*
 	3. Search for the new template and click on the search result
 	4. Tick all the boxes of *Applications*, *Graphs* you want to be used on your host and hit *enable* or *copy*
-		1. [APC-UPS template](https://share.zabbix.com/power-ups/apc/updated-apc-ups)
+		
 
 
