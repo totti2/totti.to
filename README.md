@@ -27,6 +27,9 @@ Exposing services to the internet is not all you should do when considering self
 * Raspberry 3B at home
 
 ## Standard Procedures
+###	Inspect your systems
+./(inspect.sh)[https://github.com/totti2/totti.to/blob/master/inspect.sh]
+
 ### Restart Docker Stacks / Reload images
 ```
 docker logs XXX
