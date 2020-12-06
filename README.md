@@ -28,7 +28,7 @@ Exposing services to the internet is not all you should do when considering self
 
 ## Standard Procedures
 ###	Inspect your systems
-./(inspect.sh)[https://github.com/totti2/totti.to/blob/master/inspect.sh]
+./[inspect.sh](https://github.com/totti2/totti.to/blob/master/inspect.sh)
 
 ### Restart Docker Stacks / Reload images
 ```
