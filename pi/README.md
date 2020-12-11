@@ -19,6 +19,16 @@ sudo -s
 sudo userdel -r -f pi
 ```
 
+5. Set options in raspi-config: time, expand filesystem, 
+```
+sudo raspi-config
+```
+
+## Install Docker and portainer-agent
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker your-user
 
 ### Useful
 - https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
