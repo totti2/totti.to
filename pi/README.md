@@ -25,10 +25,13 @@ sudo raspi-config
 ```
 
 ## Install Docker and portainer-agent
-
+```
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker your-user
+```
+See [here](https://github.com/totti2/totti.to/tree/master/portainer_agent) for the portainer-agent compose-file.
+
 
 ### Useful
 - https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
