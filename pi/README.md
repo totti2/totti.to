@@ -2,7 +2,7 @@
 
 1. after flashing the SD-card put an empty *ssh* file on the boot partition
 
-2. Add user, creat password and add user to sudoers group
+2. Add user, create password and add user to *sudoers* group
 ```
 sudo useradd -aG username
 sudo passwd username
@@ -24,14 +24,21 @@ sudo userdel -r -f pi
 sudo raspi-config
 ```
 
-## Install Docker and portainer-agent
+## Install Docker 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker your-user
 ```
+
+## portainer-agent
 See [here](https://github.com/totti2/totti.to/tree/master/portainer_agent) for the portainer-agent compose-file.
 
+## zabbix-agent
+See [here](https://github.com/totti2/totti.to/blob/master/zabbix/docker-compose.yml) for the zabbix-agent compose-file.
+
+## zabbix-agent
+See [here]() for the zabbix-agent compose-file.
 
 ### Useful
 - https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
