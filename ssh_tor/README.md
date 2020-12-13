@@ -3,7 +3,7 @@
 Providing an SSH-access via tor allows me to acces my server even if port forwarding and Dyn-DNS are failing.
 Using the [stealth-mode](https://www.antitree.com/2017/08/tor-onion-service-stealth-and-basic-authentication-modes/) avoids the onion address to be listed somewhere. Also it allows only known users to find your service.
 
-On the server side - Rasperry Pi
+## On the server side - Rasperry Pi
 
 ```
 sudo apt install tor
@@ -15,8 +15,16 @@ HiddenServiceVersion 2
 HiddenServicePort 1234 127.0.0.1:22
 HiddenServiceAuthorizeClient stealth user
 ...
-
+sudo cat /var/lib/tor/hidden_ssh/hostname
 sudo systemctl restart tor
 ```
 
-On the client side - 
+## On the client side - udoo
+
+Install tor using the [repository](http://qrmfuxwgyzk5jdjz.onion/docs/debian.html.en#ubuntu)
+```
+sudo nano /etc/tor/torrc
+# see hostname-file on the server
+...
+HidServAuth longonionaddress.onion supersecretpassphrasefromabove
+```
