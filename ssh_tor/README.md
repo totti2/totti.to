@@ -24,7 +24,7 @@ sudo systemctl restart tor
 Install tor using the [repository](http://qrmfuxwgyzk5jdjz.onion/docs/debian.html.en#ubuntu)
 ```
 sudo nano /etc/tor/torrc
-# see hostname-file on the server
+# see /var/lib/hidden_ssh/hostname on the server
 ...
 HidServAuth longonionaddress.onion supersecretpassphrasefromabove
 ```
