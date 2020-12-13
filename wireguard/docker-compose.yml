@@ -10,8 +10,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Berlin
-      - SERVERURL=cloud.totti-web.de #optional
-      - SERVERPORT=51820 #optional
+      - SERVERURL=domain.tld #optional
+      - SERVERPORT=1234 #optional
       - PEERS=20 #optional
 #      - PEERDNS=auto #optional
       - INTERNAL_SUBNET=10.10.10.0 #optional
@@ -20,7 +20,7 @@ services:
       - /home/icke/wireguard/config:/config
       - /lib/modules:/lib/modules
     ports:
-      - 51820:51820/udp
+      - 1234:51820/udp
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
