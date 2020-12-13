@@ -3,7 +3,7 @@
 
 Allow all outgoing traffic.
 Block all incoming traffic.
-Identify the ports & protocol your services are exposed on and allow them.
+Identify the ports & protocols your services are using and allow them.
 
 ```bash
 sudo -s
