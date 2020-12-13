@@ -1,5 +1,12 @@
 version: "3"
+
 # More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+
+# change the DNS-server in the OpenWRT Web Interface
+# log in to your openwrt interface luci via 192.168.1.1
+# network -> interfaces -> edit wan -> advanced settings
+# uncheck "use dns servers advertised by peer"
+# add ip addresses of the dns you want to use to "use custom dns servers"
 
 services:
   pihole:
