@@ -7,8 +7,8 @@ services:
 
     zabbix:
         ports:
-            - 123480:80
-            - 123451:10051
+            - 1234:80
+            - 12345:10051
         image: zabbix/zabbix-appliance:latest
         container_name: zabbix_main
         restart: unless-stopped
@@ -17,7 +17,7 @@ services:
         container_name: zabbix-agent
         environment:
             - ZBX_HOSTNAME=zabbix-agent
-            - ZBX_SERVER_HOST=172.19.0.2
+            - ZBX_SERVER_HOST=172.1XX.XXX.XXX
         image: zabbix/zabbix-agent
         privileged: true
         restart: unless-stopped
