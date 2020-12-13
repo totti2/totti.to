@@ -7,7 +7,7 @@ services:
 		container_name: whoami
 		labels:
 			- traefik.enable=true
-			- traefik.http.routers.whoami.rule=Host('whoami.ittotti.de')
+			- traefik.http.routers.whoami.rule=Host('whoami.domain.tld')
       			- traefik.http.routers.whoami.entrypoints=websecure
       			- traefik.http.routers.whoami.tls.certresolver=defaultresolver
 #			- traefik.docker.network=default
