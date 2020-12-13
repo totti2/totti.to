@@ -37,8 +37,8 @@ See [here](https://github.com/totti2/totti.to/tree/master/portainer_agent) for t
 ## zabbix-agent
 See [here](https://github.com/totti2/totti.to/blob/master/zabbix/docker-compose.yml) for the zabbix-agent compose-file.
 
-## zabbix-agent
-See [here]() for the zabbix-agent compose-file.
+## SSH via Tor
+See [here](https://github.com/totti2/totti.to/blob/master/ssh_tor/README.md) for some ssh via tor instructions.
 
 ### Useful
 - https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
