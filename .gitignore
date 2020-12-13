@@ -7,3 +7,4 @@ zabbix/i-docker-compose.yml
 totti.to.mm
 portainer_agent/i-docker-compose.yml
 portainer_agent/i-docker-compose.yml
+*.i
