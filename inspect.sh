@@ -33,7 +33,7 @@ Network and Ports
 netstat -tapen
 ============================
 "
-netstat -tapen
+sudo netstat -tapen
 
 
 echo "
