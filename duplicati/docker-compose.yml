@@ -1,24 +1,23 @@
 version: '2'
 
-volumes:
-#   CONFIG
-    duplicati-data:
-#   TARGET
-    bkp:
-#   SOURCES
-    portainer_portainer_data:
-#    etc:
+# volumes:
+# #   CONFIG
+    # duplicati-data:
+# #   TARGET
+    # bkp:
+# #   SOURCES
+    # portainer_portainer_data:
+# #    etc:
     
 services:
     duplicati:
+        image: duplicati/duplicati
         ports:
             - '8200:8200'
         volumes:
             #   CONFIG
-            - 'duplicati-data:/data'
+            - '/ssd/duplicati/data:/data'
             #   TARGET
-            - 'bkp:/home/bkp'
+            - '/ssd/duplicati/bkp:/home/bkp'
             #   SOURCES
-            - 'portainer_portainer_data:/home/source/portainer'
-            - '/etc:/home/source/etc'
-        image: duplicati/duplicati
+            - '/home/icke/.config/appdata/portainer:/home/source/portainer'
