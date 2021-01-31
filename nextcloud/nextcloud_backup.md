@@ -12,3 +12,4 @@ sudo -u www-data php /var/www/nextcloud/occ maintenance:mode --off
 
 docker exec -u 33 nc_app ./occ maintenance:mode --on
 docker exec -u mysql nc_db mysqldump --single-transaction -h localhost -u root --password=password nextcloud > /data_4TB/bkp/duplicati/nextcloud-db/nc_db_bkp.sql
+docker exec -u 33 nc_app ./occ maintenance:mode --off
