@@ -13,7 +13,7 @@ Exposing services to the internet is not all you should do when considering self
 - [ ] Intrusion Detection System
 
 ## Target services
-- [ ] nextcloud
+- [x] nextcloud
 - [ ] jitsi-meet server
 - [ ] matrix-server
 - [x] wireguard
