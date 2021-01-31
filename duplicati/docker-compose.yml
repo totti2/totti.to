@@ -3,14 +3,21 @@ version: '2'
 services:
     duplicati:
         image: duplicati/duplicati
+        container_name: duplicati
+        restart: unless-stopped
         ports:
             - '8200:8200'
         volumes:
             #   CONFIG
             - /ssd/duplicati/data:/data
             #   TARGET
-            - /ssd/duplicati/bkp:/home/bkp
+            - /data_4TB/bkp/duplicati/:/home/bkp
             #   SOURCES
             # - /home/icke/.config/appdata/portainer:/home/source/portainer
-            - /var/lib/docker/volumes:/home/source/docker-volumes
-            # - /ssd/nextcloud/data:/home/source/nextcloud/data
+            - /var/lib/docker/volumes:/home/source/docker-volumes:ro
+            - /ssd/nextcloud/data:/home/source/nextcloud/data:ro
+            - /ssd/nextcloud/etc:/home/source/nextcloud/etc:ro
+            - /ssd/nextcloud/server:/home/source/nextcloud/server:ro
+            - /ssd/nextcloud/config:/home/source/nextcloud/config:ro
+            - /var/run/docker.sock:/var/run/docker.sock
+            #   DOCKER SOCKS FOR DOCKER COMMANDS
